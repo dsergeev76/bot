@@ -51,6 +51,6 @@ if (search_btn!=undefined) {
         location.href="https://yandex.ru";
     }
     if (flag) {
-        btn_next.click();
+        setTimeout(function(){btn_next.click()},5000);
     }
 }
