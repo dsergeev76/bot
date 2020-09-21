@@ -52,9 +52,10 @@ if (btnK!=undefined) {
         }},500);
 
 } else if (location.hostname!="www.google.com") {
-     if (get_random (0,100)>80 && get_random (0,100)<90) {
+    let val = get_random (0,100);
+    if (val>80 && val<90) {
          location.href="https://google.com";
-     } else if (get_random (0,100)>90) {
+     } else if (val>90) {
          location.href="https://yandex.ru/";
      } else {
          let links = document.links;
