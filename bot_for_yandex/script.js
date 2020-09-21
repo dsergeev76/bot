@@ -51,17 +51,18 @@ if (search_btn!=undefined) {
         }},500);
 
 } else if (location.hostname!="yandex.ru") {
-     if (get_random (0,100)>80 && get_random (0,100)<90) {
+    let val = get_random (0,100);
+    if (val>80 && val<90) {
          location.href="https://yandex.ru/";
-     } else if (get_random (0,100)>90) {
-         location.href="https://google.com";
-     } else {
+    } else if (val>90) {
+        location.href="https://google.com";
+    } else {
          let links = document.links;
          setInterval (function(){
              let link = links[get_random(0,links.length)];
              if (link.href.indexOf(location.hostname)!=-1) {
              setTimeout(function(){link.click()},2000);}},5000);
-     }
+    }
 } else {
     let site = getCookie("site");
     let page_number = document.querySelector(".pager__item_current_yes").innerText;
